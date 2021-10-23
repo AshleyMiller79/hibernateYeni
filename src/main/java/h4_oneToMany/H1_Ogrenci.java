@@ -3,9 +3,9 @@ package h4_oneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 //import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -23,7 +23,9 @@ import javax.persistence.Table;
 	
 	private int ogrNot;
 	
-	@OneToMany(mappedBy="ogrenci" )
+	
+	// Getirme islemleri icin ===> fetch = FetchType.EAGER veya fetch = FetchType.LAZY 
+	@OneToMany(mappedBy="ogrenci" , orphanRemoval = true, cascade = CascadeType.ALL,fetch = FetchType.LAZY )
 	
 	private List <H2_Kitap> kitapListesi = new ArrayList<>();
 	
