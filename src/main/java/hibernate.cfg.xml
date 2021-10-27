@@ -10,14 +10,16 @@
         <property name="connection.url">jdbc:mysql://localhost:3306/sys?serverTimezone=UTC</property>
         <property name="connection.username">root</property>
         <property name="connection.password">face571622star</property>
+   <!-- Select our SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+  
   	<property name="hbm2ddl.auto">update</property>
         <!-- JDBC connection pool settings ... using built-in test pool
        
          <property name="connection.pool_size">1</property>-->
        
       
-        <!-- Select our SQL dialect -->
-        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+       
         <!-- Echo the SQL to stdout -->
         <property name="show_sql">false</property>
      
@@ -37,16 +39,14 @@
 
 
 
-   
+   <!-- en üstteki ilk beş property mysql kullananlar için. sql kullananlar onları silip  alttaki  bes property yi yapıştırsınlar-->
    
     <!--    <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
         <property name="hibernate.dialect">org.hibernate.dialect.Oracle12cDialect</property>
         <property name="hibernate.connection.username">meryem</property>
         <property name="hibernate.connection.password">1234</property>
         <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521/ORCLCDB.localdomain</property>
-        <property name="hbm2ddl.auto">update</property>
-   		<property name="show_sql">true</property> 
-   		<property name="format_sql">true</property> 
+       
    		--> 
    
    
